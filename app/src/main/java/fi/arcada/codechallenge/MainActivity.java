@@ -40,11 +40,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calculate(View view){
-        double medeltal = 0.0;
-        for(int i = 0; i < values.length; i++){
-            medeltal = medeltal + values[i];
-        }
-        double average = medeltal / values.length;
-        outputCalc.setText(String.valueOf(average));
+        outputCalc.setText(String.format("Medelvärde: %2f ", Statistics.calcMean(values)));
     }
 }
