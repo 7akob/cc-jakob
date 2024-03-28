@@ -14,10 +14,10 @@
         android:text="Code Challenge"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/inputText"
-        app:layout_constraintHorizontal_bias="0.208"
+        app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="@+id/inputText"
         app:layout_constraintTop_toBottomOf="@+id/inputText"
-        app:layout_constraintVertical_bias="0.094" />
+        app:layout_constraintVertical_bias="0.066" />
 
     <Button
         android:id="@+id/btnOk"
@@ -49,20 +49,20 @@
         android:text="Kalkylera"
         app:layout_constraintBottom_toBottomOf="@+id/calcText"
         app:layout_constraintEnd_toEndOf="@+id/btnOk"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnOk"
         app:layout_constraintTop_toTopOf="@+id/calcText"
-        app:layout_constraintVertical_bias="0.37" />
+        app:layout_constraintVertical_bias="0.372" />
 
     <TextView
         android:id="@+id/calcText"
         android:layout_width="200dp"
-        android:layout_height="21dp"
-        android:layout_marginBottom="116dp"
+        android:layout_height="112dp"
+        android:layout_marginBottom="320dp"
         android:text="Medeltalet är:"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/inputText"
-        app:layout_constraintHorizontal_bias="0.269"
+        app:layout_constraintEnd_toStartOf="@+id/calcBttn"
+        app:layout_constraintHorizontal_bias="0.186"
         app:layout_constraintStart_toStartOf="@+id/inputText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
