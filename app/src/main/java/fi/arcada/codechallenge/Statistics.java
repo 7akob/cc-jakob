@@ -6,12 +6,32 @@ import java.util.Collections;
 
 public class Statistics {
 
-    public static double calcStdev(ArrayList<Double> values){
-    double sum = 0.0;
-        for (double num : values) {
-            sum += num;
+    public static double calcMode(ArrayList<Double> values) {
+        ArrayList<Double> sorted = new ArrayList<>(values);
+
+        Collections.sort(sorted);
+
+        double currNum = sorted.get(0);
+        int currFreq = 1;
+        double maxNum = currNum;
+        int maxFreq = 1;
+
+        for (int i = 1; i < sorted.size() ; i++) {
+            if (sorted.get(i) == currNum){
+                currFreq++;
+            } else {
+                currNum = sorted.get(i);
+            }
+
+            if (currFreq > maxFreq){
+                maxNum = currNum;
+            }
         }
-        double mean = sum / values.size();
+        return maxNum;
+    }
+
+    public static double calcStdev(ArrayList<Double> values){
+        double mean = calcMean(values);
 
         double sumSquaredDiff = 0.0;
         for (double num : values) {

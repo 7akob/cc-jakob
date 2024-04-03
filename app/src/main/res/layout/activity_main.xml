@@ -58,11 +58,18 @@
         android:id="@+id/calcText"
         android:layout_width="200dp"
         android:layout_height="112dp"
-        android:layout_marginBottom="320dp"
+        android:layout_marginBottom="360dp"
         android:text="Medeltalet är:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/calcBttn"
         app:layout_constraintHorizontal_bias="0.186"
         app:layout_constraintStart_toStartOf="@+id/inputText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="391dp"
+        android:layout_height="318dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
