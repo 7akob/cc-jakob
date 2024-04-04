@@ -67,4 +67,41 @@ public class Statistics {
         }
         return medeltal / values.size();
     }
+
+    public static double calcLQ(ArrayList<Double> values){
+        Collections.sort(values);
+
+        int index = (int) Math.ceil(0.25*(values.size()+1))-1;
+
+        if(values.size() % 2 !=0){
+            return values.get(index);
+        }
+        else {
+            double lower = values.get(index);
+            double upper = values.get(index +1);
+            return (lower + upper) / 2;
+        }
+    }
+
+    public static double calcUQ(ArrayList<Double> values){
+        Collections.sort(values);
+
+        int index = (int) Math.ceil(0.75*(values.size() +1 )) -1;
+
+        if(values.size() % 2 !=0){
+            return values.get(index);
+        }
+        else {
+            double lower = values.get(index);
+            double upper = values.get(index +1);
+            return (lower + upper) /2;
+        }
+    }
+
+    public static double calcLQR(ArrayList<Double> values){
+        double lq = calcLQ(values);
+        double uq = calcUQ(values);
+        return uq-lq;
+    }
+
 }
